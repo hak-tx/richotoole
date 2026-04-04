@@ -30,33 +30,21 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hamburger menu */
-.nav-open .nav-menu {
-  display: flex;
+/* Bandsintown widget overrides to match original centered layout */
+.bit-widget .bit-events .bit-event {
+  text-align: center !important;
+  justify-content: center !important;
 }
 
-/* Fade in animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.bit-widget .bit-events .bit-event .bit-event-info {
+  text-align: center !important;
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+.bit-widget .bit-events .bit-event .bit-event-buttons {
+  justify-content: center !important;
 }
 
-/* Hero gradient overlay */
-.hero-gradient {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.1) 40%,
-    rgba(0, 0, 0, 0.6) 80%,
-    rgba(10, 10, 10, 1) 100%
-  );
-}
-
-/* Spotify embed responsive */
-.spotify-embed iframe {
-  border-radius: 12px;
+.bit-widget .bit-top-track-button,
+.bit-widget .bit-play-my-city-button {
+  text-align: center !important;
 }

@@ -5,20 +5,16 @@ import { useEffect } from "react";
 export default function BandsintownWidget() {
   useEffect(() => {
     // Load the Bandsintown widget script
-    const script = document.createElement("script");
-    script.src = "https://widgetv3.bandsintown.com/main.min.js";
-    script.charset = "utf-8";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup on unmount
-      try {
-        document.body.removeChild(script);
-      } catch {
-        // Script may have already been removed
-      }
-    };
+    const existing = document.querySelector(
+      'script[src*="widgetv3.bandsintown.com"]'
+    );
+    if (!existing) {
+      const script = document.createElement("script");
+      script.src = "https://widgetv3.bandsintown.com/main.min.js";
+      script.charset = "utf-8";
+      script.async = true;
+      document.body.appendChild(script);
+    }
   }, []);
 
   return (
@@ -36,7 +32,10 @@ export default function BandsintownWidget() {
       data-link-text-color="#FFFFFF"
       data-display-lineup="false"
       data-display-play-my-city="true"
-      data-separator-color="rgba(255,255,255,0.1)"
+      data-separator-color="rgba(255,255,255,0.15)"
+      data-popup-background-color="#0a0a0a"
+      data-bit-logo-position="bottomRight"
+      data-bit-logo-color="white"
     />
   );
 }

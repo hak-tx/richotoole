@@ -21,11 +21,24 @@ export default function Home() {
       </section>
 
       {/* Upcoming Shows - Bandsintown Widget */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-light text-center uppercase tracking-[0.3em] mb-10 text-gray-200">
+      <section className="py-16 px-4 border-t border-white/10">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-light text-center uppercase tracking-[0.4em] mb-6 text-gray-200">
             Upcoming Shows
           </h2>
+          <p className="text-gray-400 text-sm mb-4">
+            Get updates on new shows, new music, and more
+          </p>
+          <div className="mb-8">
+            <a
+              href="https://www.bandsintown.com/a/39860-rich-otoole"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-white/40 hover:border-white text-white uppercase tracking-widest px-6 py-2 text-xs transition-colors"
+            >
+              Follow Rich O&apos;Toole
+            </a>
+          </div>
           <BandsintownWidget />
         </div>
       </section>
@@ -33,7 +46,7 @@ export default function Home() {
       {/* Booking */}
       <section className="py-16 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-light uppercase tracking-[0.3em] mb-8 text-gray-200">
+          <h2 className="text-2xl sm:text-3xl font-light uppercase tracking-[0.4em] mb-8 text-gray-200">
             Booking
           </h2>
           <p className="text-gray-300 text-lg mb-1">Jimmy Dasher</p>
@@ -47,7 +60,7 @@ export default function Home() {
           <div className="mt-6">
             <a
               href="mailto:jimmy@countdowntalent.com"
-              className="inline-block border border-white/30 hover:border-white text-white uppercase tracking-widest px-8 py-3 text-sm transition-colors"
+              className="inline-block border border-white/40 hover:border-white text-white uppercase tracking-widest px-8 py-3 text-xs transition-colors"
             >
               Email
             </a>
@@ -58,7 +71,7 @@ export default function Home() {
       {/* Bio */}
       <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-light tracking-wide mb-8 text-gray-200">
+          <h2 className="text-2xl sm:text-3xl font-light tracking-wide mb-8 text-gray-200">
             Bio
           </h2>
           <p className="text-gray-400 leading-relaxed text-base sm:text-lg">
@@ -72,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* Social Media */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 pb-24">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-gray-300 text-lg mb-8">
             Follow Rich O&apos;Toole on your favorite social media platforms below.
