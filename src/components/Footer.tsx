@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaTiktok, FaSpotify, FaYoutube, FaApple } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTiktok, FaSpotify, FaYoutube, FaApple, FaXTwitter } from "react-icons/fa6";
 
 const socialLinks = [
   { href: "https://www.facebook.com/RichOTooleMusic/", icon: FaFacebookF, label: "Facebook" },
   { href: "https://www.instagram.com/richotoole/", icon: FaInstagram, label: "Instagram" },
+  { href: "https://x.com/RichOToole", icon: FaXTwitter, label: "X" },
   { href: "https://www.tiktok.com/@therichotoole", icon: FaTiktok, label: "TikTok" },
   { href: "https://open.spotify.com/artist/2t6FHAUXxi9eiatP2Mavh0", icon: FaSpotify, label: "Spotify" },
   { href: "https://www.youtube.com/richotoole", icon: FaYoutube, label: "YouTube" },

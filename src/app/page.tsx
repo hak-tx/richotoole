@@ -84,7 +84,7 @@ export default function Home() {
                   Stream Now
                 </a>
                 <a
-                  href="https://music.apple.com/us/artist/rich-otoole/191054733"
+                  href="https://music.apple.com/us/album/god-is-a-gentleman/1846851468"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block border border-white/30 hover:border-accent text-white hover:text-accent font-bold uppercase tracking-widest px-8 py-3 text-sm transition-colors text-center"
@@ -233,6 +233,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-6">
             <a href="https://www.facebook.com/RichOTooleMusic/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors text-sm uppercase tracking-widest">Facebook</a>
             <a href="https://www.instagram.com/richotoole/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors text-sm uppercase tracking-widest">Instagram</a>
+            <a href="https://x.com/RichOToole" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors text-sm uppercase tracking-widest">X</a>
             <a href="https://www.tiktok.com/@therichotoole" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors text-sm uppercase tracking-widest">TikTok</a>
             <a href="https://www.youtube.com/richotoole" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors text-sm uppercase tracking-widest">YouTube</a>
           </div>

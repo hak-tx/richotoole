@@ -121,7 +121,7 @@ export default function EPKPage() {
               <h3 className="text-accent uppercase tracking-widest text-sm mb-2">
                 Booking
               </h3>
-              <p className="text-gray-300">Jimmy</p>
+              <p className="text-gray-300">Jimmy Dasher / Countdown Talent</p>
               <a
                 href="mailto:jimmy@countdowntalent.com"
                 className="text-gray-400 hover:text-accent transition-colors"
