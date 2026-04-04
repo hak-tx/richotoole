@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     siteName: "Rich O'Toole",
     type: "website",
   },
+  icons: {
+    icon: "https://cdn.shopify.com/s/files/1/0754/4255/3057/files/rich_bkgrd_image.jpg",
+  },
 };
 
 export default function RootLayout({

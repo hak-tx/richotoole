@@ -1,28 +1,39 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --muted: #888888;
+  /* Primary scheme: scheme-d0f66d31 - black bg, white text */
+  --background: #000000;
+  --foreground: #ffffff;
+  --button: #cfcfcf;
+  --button-label: #000000;
+  --secondary-button-label: #f7f7f7;
+  --shadow: #f5f4f0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Outfit', Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 110%;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Music streaming link buttons */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+/* Music streaming link buttons - from original custom liquid */
 .music-link {
   display: flex;
   align-items: center;
@@ -47,6 +58,25 @@ html {
 
 .music-link span {
   font-size: 14px;
+}
+
+/* Shopify Dawn-style button */
+.btn-secondary {
+  display: inline-block;
+  border: 2px solid var(--secondary-button-label);
+  color: var(--secondary-button-label);
+  background: transparent;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 600px) {
