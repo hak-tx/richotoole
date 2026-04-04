@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Upcoming tour dates and shows for Rich O'Toole.",
 };
 
-const CDN = "https://cdn.shopify.com/s/files/1/0754/4255/3057/files";
+const CDN = "https://richotoole.com/cdn/shop/files";
 
 const latestAlbums = [
   {

@@ -1,7 +1,7 @@
 import BandsintownWidget from "@/components/BandsintownWidget";
 import SocialIcons from "@/components/SocialIcons";
 
-const CDN = "https://cdn.shopify.com/s/files/1/0754/4255/3057/files";
+const CDN = "https://richotoole.com/cdn/shop/files";
 
 export default function Home() {
   return (
