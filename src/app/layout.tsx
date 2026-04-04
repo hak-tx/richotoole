@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "https://richotoole.com/cdn/shop/files/rich_bkgrd_image.jpg",
+    icon: "/images/rich_bkgrd_image.webp",
   },
 };
 
