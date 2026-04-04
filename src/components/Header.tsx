@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const CDN = "https://richotoole.com/cdn/shop/files";
+const CDN_FILES = "https://cdn.shopify.com/s/files/1/0754/4255/3057/files";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -23,7 +23,7 @@ export default function Header() {
           <Link href="/" className="flex-shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`${CDN}/Rich_O_Tool_logo.png`}
+              src={`${CDN_FILES}/Rich_O_Tool_logo.png`}
               alt="Rich O'Toole"
               style={{ width: 130, height: "auto" }}
             />

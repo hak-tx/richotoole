@@ -2,6 +2,7 @@ import BandsintownWidget from "@/components/BandsintownWidget";
 import SocialIcons from "@/components/SocialIcons";
 
 const CDN = "https://richotoole.com/cdn/shop/files";
+const CDN_FILES = "https://cdn.shopify.com/s/files/1/0754/4255/3057/files";
 
 export default function Home() {
   return (
@@ -77,7 +78,7 @@ export default function Home() {
               className="music-link"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={`${CDN}/Apple_logo_white_svg.png?v=1745111984`} alt="iTunes" width={24} height={24} />
+              <img src={`${CDN_FILES}/Apple_logo_white_svg.png?v=1745111984`} alt="iTunes" width={24} height={24} />
               <span>Buy on iTunes</span>
             </a>
             <a
@@ -87,7 +88,7 @@ export default function Home() {
               className="music-link"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={`${CDN}/Spotify_Primary_Logo_RGB_White.png?v=1745111451`} alt="Spotify" width={24} height={24} />
+              <img src={`${CDN_FILES}/Spotify_Primary_Logo_RGB_White.png?v=1745111451`} alt="Spotify" width={24} height={24} />
               <span>Stream on Spotify</span>
             </a>
             <a
@@ -97,7 +98,7 @@ export default function Home() {
               className="music-link"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={`${CDN}/Apple_logo_white_svg.png?v=1745111984`} alt="Apple Music" width={24} height={24} />
+              <img src={`${CDN_FILES}/Apple_logo_white_svg.png?v=1745111984`} alt="Apple Music" width={24} height={24} />
               <span>Stream on Apple Music</span>
             </a>
           </div>
