@@ -3,149 +3,84 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Discography | Rich O'Toole",
-  description: "Complete discography of Rich O'Toole - all albums from Seventeen to God Is a Gentleman.",
+  description:
+    "Complete discography of Rich O'Toole - all albums from Seventeen to God Is a Gentleman.",
 };
+
+const CDN = "https://cdn.shopify.com/s/files/1/0754/4255/3057/files";
 
 const albums = [
   {
-    title: "God Is a Gentleman",
-    year: "2024",
-    label: "PTO Records",
-    image: "/images/god-is-a-gentleman.svg",
-    spotify: "https://open.spotify.com/artist/2t6FHAUXxi9eiatP2Mavh0",
-    apple: "https://music.apple.com/us/artist/rich-otoole/191054733",
-    description: "The 9th studio album from Rich O'Toole.",
+    title: "God is a Gentleman",
+    image: `${CDN}/God_is_a_Gentleman_Album_Cover.jpg`,
+    buyLink:
+      "https://itunes.apple.com/us/album/god-is-a-gentleman/1846851468?app=itunes&ls=1",
   },
   {
     title: "Ghost",
-    year: "2024",
-    label: "PTO Records",
-    image: "/images/ghost.svg",
-    spotify: "https://open.spotify.com/artist/2t6FHAUXxi9eiatP2Mavh0",
-    apple: "https://music.apple.com/us/artist/rich-otoole/191054733",
-    description: "Reached #5 on the iTunes charts nationwide. Country Music France called it one of the best written records of 2024.",
+    image: `${CDN}/GHOST-3000x3000-FINAL.jpg`,
+    buyLink:
+      "https://itunes.apple.com/us/album/ghost/1747221673?app=itunes&ls=1",
   },
   {
     title: "New York",
-    year: "2020",
-    label: "Buffalo Roam Records / Average Joes Entertainment",
-    image: "/images/new-york.svg",
-    spotify: "https://open.spotify.com/artist/2t6FHAUXxi9eiatP2Mavh0",
-    apple: "https://music.apple.com/us/artist/rich-otoole/191054733",
-    description: "Released on Buffalo Roam Records through Average Joes Entertainment.",
+    image: `${CDN}/RT_New_York.webp`,
+    buyLink:
+      "https://music.apple.com/us/album/new-york/1508714327?app=itunes",
   },
   {
     title: "American Kid",
-    year: "2017",
-    label: "PTO Records",
-    image: "/images/american-kid.svg",
-    spotify: "https://open.spotify.com/artist/2t6FHAUXxi9eiatP2Mavh0",
-    apple: "https://music.apple.com/us/artist/rich-otoole/191054733",
-    description: "Debuted at #5 on the Country Music iTunes Chart and #43 on the National Billboard Chart.",
+    image: `${CDN}/RT_American_Kid.webp`,
+    buyLink:
+      "https://music.apple.com/us/album/american-kid/1198717567?app=itunes",
   },
   {
     title: "Jaded",
-    year: "2014",
-    label: "PTO Records",
-    image: "/images/jaded.svg",
-    spotify: "https://open.spotify.com/artist/2t6FHAUXxi9eiatP2Mavh0",
-    apple: "https://music.apple.com/us/artist/rich-otoole/191054733",
-    description: "Debuted at #10 on the Country Music iTunes Chart.",
-  },
-  {
-    title: "Brightwork",
-    year: "2013",
-    label: "PTO Records",
-    image: "/images/brightwork.svg",
-    spotify: "https://open.spotify.com/artist/2t6FHAUXxi9eiatP2Mavh0",
-    apple: "https://music.apple.com/us/artist/rich-otoole/191054733",
-    description: "The debut release on Rich's own PTO Records label.",
-  },
-  {
-    title: "Kiss of a Liar",
-    year: "2010",
-    label: "",
-    image: "/images/kiss-of-a-liar.svg",
-    spotify: "https://open.spotify.com/artist/2t6FHAUXxi9eiatP2Mavh0",
-    apple: "https://music.apple.com/us/artist/rich-otoole/191054733",
-    description: "Featured cameos from Josh Abbott and Pat Green. Peaked at #73 on Billboard's country chart.",
+    image: `${CDN}/RT_Jaded.webp`,
+    buyLink:
+      "https://music.apple.com/us/album/jaded/883297855?app=itunes",
   },
   {
     title: "In a Minute or 2",
-    year: "2008",
-    label: "",
-    image: "/images/in-a-minute-or-2.svg",
-    spotify: "https://open.spotify.com/artist/2t6FHAUXxi9eiatP2Mavh0",
-    apple: "https://music.apple.com/us/artist/rich-otoole/191054733",
-    description: "Rich O'Toole's sophomore album.",
-  },
-  {
-    title: "Seventeen",
-    year: "2006",
-    label: "",
-    image: "/images/seventeen.svg",
-    spotify: "https://open.spotify.com/artist/2t6FHAUXxi9eiatP2Mavh0",
-    apple: "https://music.apple.com/us/artist/rich-otoole/191054733",
-    description: "Rich's debut album, named 'Best Album of 2006 That No One Told You About' by Americana Music Times.",
+    image: `${CDN}/RT_In_a_minute_or_2.webp`,
+    buyLink:
+      "https://itunes.apple.com/us/album/675377522?app=itunes&ls=1",
   },
 ];
 
 export default function DiscographyPage() {
   return (
-    <div className="pt-24 sm:pt-32 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl sm:text-5xl font-bold text-center uppercase tracking-wider mb-4">
-          Discography
-        </h1>
-        <div className="w-16 h-0.5 bg-accent mx-auto mb-12" />
-
-        <div className="space-y-16">
-          {albums.map((album) => (
-            <div
-              key={album.title}
-              className="grid md:grid-cols-[300px_1fr] gap-8 items-start"
-            >
-              <div className="relative aspect-square max-w-[300px] mx-auto w-full">
-                <Image
-                  src={album.image}
-                  alt={album.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="text-center md:text-left">
-                <p className="text-accent uppercase tracking-widest text-sm mb-1">
-                  {album.year} {album.label && `\u2022 ${album.label}`}
-                </p>
-                <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-                  {album.title}
-                </h2>
-                <p className="text-gray-400 mb-6 leading-relaxed max-w-xl">
-                  {album.description}
-                </p>
-                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                  <a
-                    href={album.spotify}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-[#1DB954] hover:bg-[#1aa34a] text-white font-bold uppercase tracking-widest px-6 py-2 text-xs transition-colors"
-                  >
-                    Spotify
-                  </a>
-                  <a
-                    href={album.apple}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-[#fc3c44] hover:bg-[#e0353c] text-white font-bold uppercase tracking-widest px-6 py-2 text-xs transition-colors"
-                  >
-                    Apple Music
-                  </a>
-                </div>
-              </div>
+    <div className="bg-[#0a0a0a] min-h-screen">
+      {albums.map((album) => (
+        <section
+          key={album.title}
+          className="py-9 px-4"
+        >
+          <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_2fr] gap-0 items-start">
+            <div className="relative w-full" style={{ aspectRatio: "1/1" }}>
+              <Image
+                src={album.image}
+                alt={album.title}
+                fill
+                className="object-contain"
+              />
             </div>
-          ))}
-        </div>
-      </div>
+            <div className="flex flex-col items-start justify-start pt-8 md:pt-4 md:pl-12">
+              <h2 className="text-3xl sm:text-4xl font-normal text-white mb-6">
+                {album.title}
+              </h2>
+              <a
+                href={album.buyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block border border-white text-white uppercase tracking-widest px-8 py-3 text-sm hover:bg-white/10 transition-colors"
+              >
+                Buy Album
+              </a>
+            </div>
+          </div>
+        </section>
+      ))}
     </div>
   );
 }

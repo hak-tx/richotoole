@@ -3,20 +3,12 @@
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
-  --accent: #c8a44e;
-  --accent-dark: #a8862e;
-  --card-bg: #141414;
-  --card-border: #222222;
   --muted: #888888;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-accent-dark: var(--accent-dark);
-  --color-card-bg: var(--card-bg);
-  --color-card-border: var(--card-border);
   --color-muted: var(--muted);
 }
 
@@ -30,21 +22,40 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Bandsintown widget overrides to match original centered layout */
-.bit-widget .bit-events .bit-event {
-  text-align: center !important;
-  justify-content: center !important;
+/* Music streaming link buttons */
+.music-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 10px 16px;
+  border: 2.5px solid white;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
 }
 
-.bit-widget .bit-events .bit-event .bit-event-info {
-  text-align: center !important;
+.music-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.bit-widget .bit-events .bit-event .bit-event-buttons {
-  justify-content: center !important;
+.music-link img {
+  width: 24px;
+  height: auto;
+  display: block;
 }
 
-.bit-widget .bit-top-track-button,
-.bit-widget .bit-play-my-city-button {
-  text-align: center !important;
+.music-link span {
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .music-links-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .music-link {
+    justify-content: center;
+  }
 }
