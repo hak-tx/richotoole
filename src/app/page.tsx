@@ -1,5 +1,6 @@
 import BandsintownWidget from "@/components/BandsintownWidget";
 import SocialIcons from "@/components/SocialIcons";
+import TacoSetlistSection from "@/components/TacoSetlistSection";
 
 export default function Home() {
   return (
@@ -45,6 +46,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Section: Taco Setlist App Promo */}
+      <TacoSetlistSection />
 
       {/* Section: "LISTEN TO ALL..." heading */}
       <section className="bg-black pt-5 pb-5 px-4">

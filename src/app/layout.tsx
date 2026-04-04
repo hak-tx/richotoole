@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import AppBanner from "@/components/AppBanner";
 
 export const metadata: Metadata = {
   title: "Rich O'Toole | Official Site",
@@ -17,6 +18,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/rich_bkgrd_image.webp",
   },
+  other: {
+    "apple-itunes-app": "app-id=6760601913",
+  },
 };
 
 export default function RootLayout({
@@ -27,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full">
+        <AppBanner />
         <Header />
         {children}
       </body>
