@@ -96,17 +96,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section: Merch Store banner with t-shirt image */}
-      <section className="relative overflow-hidden">
+      {/* Section: Merch Store - image then CTA below */}
+      <section className="bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/rich-mustang.webp"
           alt="Rich O'Toole Merch"
-          className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] object-cover object-center"
+          className="w-full max-w-2xl mx-auto"
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl text-white mb-6">MERCH STORE</h2>
+        <div className="text-center py-10 px-4">
+          <h2 className="text-3xl sm:text-4xl text-white mb-6">MERCH STORE</h2>
           <a
             href="https://godtexasandtacos.com"
             target="_blank"
