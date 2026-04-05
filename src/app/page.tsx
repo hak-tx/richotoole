@@ -25,9 +25,11 @@ export default function Home() {
         />
       </section>
 
+      <Divider />
+
       {/* New Album */}
-      <section className="bg-black pt-9 pb-5 px-4">
-        <ScrollReveal animation="blur-in">
+      <section className="bg-black pt-8 pb-5 px-4">
+        <ScrollReveal animation="fade-up">
           <div className="max-w-[1600px] mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl text-white">New Album</h1>
           </div>
@@ -35,9 +37,9 @@ export default function Home() {
       </section>
 
       {/* God Is a Gentleman album */}
-      <section className="bg-black pt-3 pb-0 px-4">
+      <section className="bg-black pt-3 pb-4 px-4">
         <div className="max-w-[1600px] mx-auto grid md:grid-cols-2 gap-0 items-center">
-          <ScrollReveal animation="slide-left">
+          <ScrollReveal animation="scale-up">
             <div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -47,8 +49,9 @@ export default function Home() {
               />
             </div>
           </ScrollReveal>
-          <ScrollReveal animation="slide-right" delay={200}>
+          <ScrollReveal animation="blur-in" delay={300}>
             <div className="text-center py-8 md:py-0">
+              <h2 className="text-2xl sm:text-3xl text-white mb-4">God Is a Gentleman</h2>
               <ITunesBuyButton albumId="god-is-a-gentleman/1846851468" label="Order on iTunes" />
             </div>
           </ScrollReveal>
