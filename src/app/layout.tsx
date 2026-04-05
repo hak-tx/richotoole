@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import AppBanner from "@/components/AppBanner";
@@ -30,6 +31,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-0H40HQXKE9"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0H40HQXKE9');
+          `}
+        </Script>
+      </head>
       <body className="min-h-full">
         <AppBanner />
         <Header />
