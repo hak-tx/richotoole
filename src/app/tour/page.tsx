@@ -10,17 +10,17 @@ const latestAlbums = [
   {
     title: "God is a Gentleman",
     image: "/images/God_is_a_Gentleman_Album_Cover.webp",
-    buyLink: "https://itunes.apple.com/us/album/god-is-a-gentleman/1846851468?app=itunes&ls=1",
+    buyLink: "https://music.apple.com/us/album/god-is-a-gentleman/1846851468",
   },
   {
     title: "Ghost",
     image: "/images/GHOST-3000x3000-FINAL.webp",
-    buyLink: "https://itunes.apple.com/us/album/ghost/1747221673?app=itunes&ls=1",
+    buyLink: "https://music.apple.com/us/album/ghost/1747221673",
   },
   {
     title: "New York",
     image: "/images/RT_New_York.webp",
-    buyLink: "https://music.apple.com/us/album/new-york/1508714327?app=itunes",
+    buyLink: "https://music.apple.com/us/album/new-york/1508714327",
   },
 ];
 

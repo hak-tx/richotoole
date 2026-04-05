@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div className="text-center py-8 md:py-0">
             <a
-              href="https://itunes.apple.com/us/album/god-is-a-gentleman/1846851468?app=itunes&ls=1"
+              href="https://music.apple.com/us/album/god-is-a-gentleman/1846851468"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary uppercase tracking-widest text-sm"

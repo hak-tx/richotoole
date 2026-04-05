@@ -9,32 +9,32 @@ const albums = [
   {
     title: "God is a Gentleman",
     image: "/images/God_is_a_Gentleman_Album_Cover.webp",
-    buyLink: "https://itunes.apple.com/us/album/god-is-a-gentleman/1846851468?app=itunes&ls=1",
+    buyLink: "https://music.apple.com/us/album/god-is-a-gentleman/1846851468",
   },
   {
     title: "Ghost",
     image: "/images/GHOST-3000x3000-FINAL.webp",
-    buyLink: "https://itunes.apple.com/us/album/ghost/1747221673?app=itunes&ls=1",
+    buyLink: "https://music.apple.com/us/album/ghost/1747221673",
   },
   {
     title: "New York",
     image: "/images/RT_New_York.webp",
-    buyLink: "https://music.apple.com/us/album/new-york/1508714327?app=itunes",
+    buyLink: "https://music.apple.com/us/album/new-york/1508714327",
   },
   {
     title: "American Kid",
     image: "/images/RT_American_Kid.webp",
-    buyLink: "https://music.apple.com/us/album/american-kid/1198717567?app=itunes",
+    buyLink: "https://music.apple.com/us/album/american-kid/1198717567",
   },
   {
     title: "Jaded",
     image: "/images/RT_Jaded.webp",
-    buyLink: "https://music.apple.com/us/album/jaded/883297855?app=itunes",
+    buyLink: "https://music.apple.com/us/album/jaded/883297855",
   },
   {
     title: "In a Minute or 2",
     image: "/images/RT_In_a_minute_or_2.webp",
-    buyLink: "https://itunes.apple.com/us/album/675377522?app=itunes&ls=1",
+    buyLink: "https://music.apple.com/us/album/in-a-minute-or-2/675377522",
   },
 ];
 
