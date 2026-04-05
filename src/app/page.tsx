@@ -6,14 +6,15 @@ import ITunesBuyButton from "@/components/ITunesBuyButton";
 export default function Home() {
   return (
     <>
-      {/* Section: Hero image - parallax fixed background */}
-      <section
-        className="bg-fixed bg-cover bg-center"
-        style={{
-          backgroundImage: "url(/images/rich_bkgrd_image.webp)",
-          height: "80vh",
-        }}
-      />
+      {/* Section: Hero image - parallax on desktop, responsive on mobile */}
+      <section className="hero-parallax">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/rich_bkgrd_image.webp"
+          alt="Rich O'Toole"
+          className="w-full h-auto block"
+        />
+      </section>
 
       {/* Section: "New Album" heading */}
       <section className="bg-black pt-9 pb-5 px-4">
