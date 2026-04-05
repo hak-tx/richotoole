@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ITunesBuyButton from "@/components/ITunesBuyButton";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Discography | Rich O'Toole",
@@ -41,21 +42,26 @@ const albums = [
 
 export default function DiscographyPage() {
   return (
-    <div className="bg-black min-h-screen">
-      {albums.map((album) => (
-        <section key={album.title} className="py-9 px-4">
-          <div className="max-w-[1600px] mx-auto grid md:grid-cols-[1fr_2fr] gap-8 items-start">
-            <div>
+    <div className="bg-black min-h-screen py-8 px-4">
+      <div className="max-w-5xl mx-auto grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+        {albums.map((album, i) => (
+          <ScrollReveal
+            key={album.title}
+            animation={i % 2 === 0 ? "slide-left" : "slide-right"}
+            delay={i * 100}
+          >
+            <div className="text-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={album.image} alt={album.title} className="w-full" />
-            </div>
-            <div className="pt-0 md:pt-4">
-              <h2 className="text-3xl sm:text-4xl text-white mb-6">{album.title}</h2>
+              <img
+                src={album.image}
+                alt={album.title}
+                className="w-full rounded-sm mb-3 sm:mb-4"
+              />
               <ITunesBuyButton albumId={album.albumId} />
             </div>
-          </div>
-        </section>
-      ))}
+          </ScrollReveal>
+        ))}
+      </div>
     </div>
   );
 }
