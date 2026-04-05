@@ -20,9 +20,9 @@ export default function Header() {
           <Link href="/" className="flex-shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/rich-logo-dark.jpeg"
+              src="/images/Rich_O_Tool_logo.webp"
               alt="Rich O'Toole"
-              style={{ width: 200, height: "auto" }}
+              style={{ width: 160, height: "auto" }}
             />
           </Link>
 
