@@ -16,13 +16,13 @@ export default function Header() {
   return (
     <header className="bg-black border-b border-white/10">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between py-3">
           <Link href="/" className="flex-shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/rich-logo-dark-transparent.png"
               alt="Rich O'Toole"
-              style={{ width: 180, height: "auto" }}
+              className="h-14 sm:h-16 md:h-20 w-auto object-contain"
             />
           </Link>
 
