@@ -7,7 +7,7 @@ export default function TacoSetlistSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-orange-900/40 via-black to-red-900/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
 
-      <div className="relative max-w-[1600px] mx-auto px-4 sm:px-8 py-20 sm:py-28">
+      <div className="relative max-w-[1600px] mx-auto px-4 sm:px-8 py-10 sm:py-14">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
           {/* App icon - large and prominent */}
           <div className="flex-shrink-0">
@@ -22,17 +22,20 @@ export default function TacoSetlistSection() {
           {/* Content */}
           <div className="text-center md:text-left flex-1">
             <p className="text-orange-400 uppercase tracking-[0.3em] text-xs sm:text-sm mb-3">
-              New App from Rich O&apos;Toole
+              1st Taco Review App in Texas
             </p>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl text-white mb-5 leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl text-white mb-3 leading-tight">
               Taco Setlist
             </h2>
-            <p className="text-gray-300 text-lg sm:text-xl leading-relaxed mb-4 max-w-2xl">
+            <p className="text-orange-300/80 text-base sm:text-lg italic mb-4">
+              Where Texas Music meets Texas Tacos.
+            </p>
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4 max-w-2xl">
               Rate &amp; review tacos everywhere you go. Discover the best
               tacos in every city — plus get Rich O&apos;Toole&apos;s latest tour
               dates, stream his music, and shop exclusive merch, all in one app.
             </p>
-            <p className="text-gray-500 text-sm mb-8">
+            <p className="text-gray-500 text-sm mb-6">
               Available on iPhone &bull; Use{" "}
               <a
                 href="https://tacosetlist.com"
@@ -46,7 +49,7 @@ export default function TacoSetlistSection() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
               <a
                 href="https://apps.apple.com/us/app/taco-setlist/id6760601913"
                 target="_blank"
