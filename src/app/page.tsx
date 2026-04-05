@@ -144,9 +144,21 @@ export default function Home() {
 
       {/* UPCOMING SHOWS */}
       <section className="bg-black pt-8 pb-0 px-4">
-        <ScrollReveal animation="blur-in">
+        <ScrollReveal animation="scale-up">
           <div className="max-w-[1600px] mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl text-white">UPCOMING SHOWS</h2>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/rich-logo-dark-transparent.png"
+              alt="Rich O'Toole"
+              className="mx-auto mb-4"
+              style={{ width: 220, height: "auto" }}
+            />
+            <h2 className="text-3xl sm:text-4xl text-white mb-2">ON TOUR</h2>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal animation="blur-in" delay={200}>
+          <div className="max-w-[1600px] mx-auto text-center mt-6">
+            <h3 className="text-xl sm:text-2xl text-gray-300">UPCOMING SHOWS</h3>
           </div>
         </ScrollReveal>
       </section>

@@ -28,7 +28,21 @@ const latestAlbums = [
 export default function TourPage() {
   return (
     <div className="bg-black min-h-screen">
-      <section className="pt-10 pb-12 px-4">
+      {/* Logo + ON TOUR header */}
+      <section className="pt-10 pb-4 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/rich-logo-dark-transparent.png"
+            alt="Rich O'Toole"
+            className="mx-auto mb-4"
+            style={{ width: 220, height: "auto" }}
+          />
+          <h1 className="text-3xl sm:text-4xl text-white">ON TOUR</h1>
+        </div>
+      </section>
+
+      <section className="pt-4 pb-12 px-4">
         <div className="max-w-4xl mx-auto">
           <BandsintownWidget />
         </div>
