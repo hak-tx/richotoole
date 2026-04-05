@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import AppBanner from "@/components/AppBanner";
+import PageTransition from "@/components/PageTransition";
 
 export const metadata: Metadata = {
   title: "Rich O'Toole | Official Site",
@@ -33,7 +34,7 @@ export default function RootLayout({
       <body className="min-h-full">
         <AppBanner />
         <Header />
-        {children}
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
