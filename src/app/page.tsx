@@ -78,8 +78,8 @@ export default function Home() {
       <section className="bg-black pt-3 pb-3 px-4">
         <ScrollReveal animation="scale-up" delay={150}>
           <div className="max-w-[1600px] mx-auto text-center">
-            <a href="/discography" className="btn-secondary uppercase tracking-widest text-sm">
-              Discography
+            <a href="/discography" className="music-link inline-flex" style={{ borderColor: "#ffffff", fontSize: "16px", padding: "12px 28px" }}>
+              Full Discography
             </a>
           </div>
         </ScrollReveal>
