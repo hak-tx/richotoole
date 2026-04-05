@@ -43,8 +43,11 @@ export default function Home() {
       {/* Section: Taco Setlist App Promo */}
       <TacoSetlistSection />
 
+      {/* Divider */}
+      <div className="bg-black px-4"><div className="max-w-4xl mx-auto border-t border-white/10" /></div>
+
       {/* Section: "LISTEN TO ALL..." heading */}
-      <section className="bg-black pt-5 pb-5 px-4">
+      <section className="bg-black pt-12 pb-5 px-4">
         <div className="max-w-[1600px] mx-auto text-center">
           <h2 className="text-xl sm:text-2xl text-white">
             LISTEN TO ALL OF RICH O&apos;TOOLE&apos;S MUSIC HERE
@@ -96,8 +99,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="bg-black px-4"><div className="max-w-4xl mx-auto border-t border-white/10" /></div>
+
       {/* Section: Merch Store - image then CTA below */}
-      <section className="bg-black">
+      <section className="bg-black pt-12">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/rich-mustang.webp"
@@ -116,6 +122,9 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black px-4"><div className="max-w-4xl mx-auto border-t border-white/10" /></div>
 
       {/* Section: "UPCOMING SHOWS" heading */}
       <section className="bg-black pt-12 pb-0 px-4">
@@ -147,6 +156,9 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black px-4"><div className="max-w-4xl mx-auto border-t border-white/10" /></div>
 
       {/* Section: Bio */}
       <section className="bg-black pt-10 pb-12 px-4">
