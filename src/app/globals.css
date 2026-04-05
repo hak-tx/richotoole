@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
-  /* Primary scheme: scheme-d0f66d31 - black bg, white text */
   --background: #000000;
   --foreground: #ffffff;
   --button: #cfcfcf;
   --button-label: #000000;
   --secondary-button-label: #f7f7f7;
   --shadow: #f5f4f0;
+  --accent-orange: #f97316;
 }
 
 @theme inline {
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
 }
 
-/* Music streaming link buttons - from original custom liquid */
+/* Music streaming link buttons */
 .music-link {
   display: flex;
   align-items: center;
@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Hero parallax - desktop only, normal responsive image on mobile */
+/* Hero parallax - desktop only */
 @media (min-width: 768px) {
   .hero-parallax {
     height: 80vh;
@@ -98,7 +98,99 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Apple-style scroll reveal - handled by JS in TacoSetlistSection */
+/* Section divider - visible gradient line */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(249, 115, 22, 0.15) 15%,
+    rgba(249, 115, 22, 0.4) 50%,
+    rgba(249, 115, 22, 0.15) 85%,
+    transparent 100%
+  );
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   Scroll Reveal Animation System
+   ============================================ */
+
+.sr {
+  will-change: transform, opacity, filter;
+}
+
+/* Fade up from below */
+.sr-fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sr-fade-up.sr-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Simple fade */
+.sr-fade-in {
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sr-fade-in.sr-visible {
+  opacity: 1;
+}
+
+/* Scale up from small */
+.sr-scale-up {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sr-scale-up.sr-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide in from left */
+.sr-slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sr-slide-left.sr-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide in from right */
+.sr-slide-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sr-slide-right.sr-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Blur in */
+.sr-blur-in {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(20px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sr-blur-in.sr-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
 
 @media (max-width: 600px) {
   .music-links-inner {
