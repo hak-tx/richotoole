@@ -150,10 +150,9 @@ export default function Home() {
             <img
               src="/images/rich-logo-dark-transparent.png"
               alt="Rich O'Toole"
-              className="mx-auto mb-4"
-              style={{ width: 220, height: "auto" }}
+              className="mx-auto mb-6 w-64 sm:w-80 md:w-96 h-auto"
             />
-            <h2 className="text-3xl sm:text-4xl text-white mb-2">ON TOUR</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl text-white mb-2">ON TOUR</h2>
           </div>
         </ScrollReveal>
         <ScrollReveal animation="blur-in" delay={200}>

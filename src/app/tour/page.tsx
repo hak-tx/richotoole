@@ -35,10 +35,9 @@ export default function TourPage() {
           <img
             src="/images/rich-logo-dark-transparent.png"
             alt="Rich O'Toole"
-            className="mx-auto mb-4"
-            style={{ width: 220, height: "auto" }}
+            className="mx-auto mb-6 w-64 sm:w-80 md:w-96 h-auto"
           />
-          <h1 className="text-3xl sm:text-4xl text-white">ON TOUR</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl text-white">ON TOUR</h1>
         </div>
       </section>
 
