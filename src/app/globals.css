@@ -98,39 +98,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Apple-style scroll reveal animations */
-.reveal-scale {
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-scale.revealed {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.reveal-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-up.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-fade {
-  opacity: 0;
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-fade.revealed {
-  opacity: 1;
-}
+/* Apple-style scroll reveal - handled by JS in TacoSetlistSection */
 
 @media (max-width: 600px) {
   .music-links-inner {
