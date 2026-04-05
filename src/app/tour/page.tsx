@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BandsintownWidget from "@/components/BandsintownWidget";
+import ITunesBuyButton from "@/components/ITunesBuyButton";
 
 export const metadata: Metadata = {
   title: "Tour | Rich O'Toole",
@@ -10,17 +11,17 @@ const latestAlbums = [
   {
     title: "God is a Gentleman",
     image: "/images/God_is_a_Gentleman_Album_Cover.webp",
-    buyLink: "https://music.apple.com/us/album/god-is-a-gentleman/1846851468",
+    albumId: "god-is-a-gentleman/1846851468",
   },
   {
     title: "Ghost",
     image: "/images/GHOST-3000x3000-FINAL.webp",
-    buyLink: "https://music.apple.com/us/album/ghost/1747221673",
+    albumId: "ghost/1747221673",
   },
   {
     title: "New York",
     image: "/images/RT_New_York.webp",
-    buyLink: "https://music.apple.com/us/album/new-york/1508714327",
+    albumId: "new-york/1508714327",
   },
 ];
 
@@ -42,9 +43,7 @@ export default function TourPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={album.image} alt={album.title} className="w-full mb-4" />
                 <h3 className="text-xl text-white mb-2">{album.title}</h3>
-                <a href={album.buyLink} target="_blank" rel="noopener noreferrer" className="btn-secondary text-sm">
-                  Buy Now
-                </a>
+                <ITunesBuyButton albumId={album.albumId} label="Buy Now" />
               </div>
             ))}
           </div>

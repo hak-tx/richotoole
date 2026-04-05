@@ -1,6 +1,7 @@
 import BandsintownWidget from "@/components/BandsintownWidget";
 import SocialIcons from "@/components/SocialIcons";
 import TacoSetlistSection from "@/components/TacoSetlistSection";
+import ITunesBuyButton from "@/components/ITunesBuyButton";
 
 export default function Home() {
   return (
@@ -35,14 +36,7 @@ export default function Home() {
             />
           </div>
           <div className="text-center py-8 md:py-0">
-            <a
-              href="https://music.apple.com/us/album/god-is-a-gentleman/1846851468"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary uppercase tracking-widest text-sm"
-            >
-              Order on iTunes
-            </a>
+            <ITunesBuyButton albumId="god-is-a-gentleman/1846851468" label="Order on iTunes" />
           </div>
         </div>
       </section>

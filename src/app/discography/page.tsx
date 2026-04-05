@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ITunesBuyButton from "@/components/ITunesBuyButton";
 
 export const metadata: Metadata = {
   title: "Discography | Rich O'Toole",
@@ -9,32 +10,32 @@ const albums = [
   {
     title: "God is a Gentleman",
     image: "/images/God_is_a_Gentleman_Album_Cover.webp",
-    buyLink: "https://music.apple.com/us/album/god-is-a-gentleman/1846851468",
+    albumId: "god-is-a-gentleman/1846851468",
   },
   {
     title: "Ghost",
     image: "/images/GHOST-3000x3000-FINAL.webp",
-    buyLink: "https://music.apple.com/us/album/ghost/1747221673",
+    albumId: "ghost/1747221673",
   },
   {
     title: "New York",
     image: "/images/RT_New_York.webp",
-    buyLink: "https://music.apple.com/us/album/new-york/1508714327",
+    albumId: "new-york/1508714327",
   },
   {
     title: "American Kid",
     image: "/images/RT_American_Kid.webp",
-    buyLink: "https://music.apple.com/us/album/american-kid/1198717567",
+    albumId: "american-kid/1198717567",
   },
   {
     title: "Jaded",
     image: "/images/RT_Jaded.webp",
-    buyLink: "https://music.apple.com/us/album/jaded/883297855",
+    albumId: "jaded/883297855",
   },
   {
     title: "In a Minute or 2",
     image: "/images/RT_In_a_minute_or_2.webp",
-    buyLink: "https://music.apple.com/us/album/in-a-minute-or-2/675377522",
+    albumId: "in-a-minute-or-2/675377522",
   },
 ];
 
@@ -50,14 +51,7 @@ export default function DiscographyPage() {
             </div>
             <div className="pt-0 md:pt-4">
               <h2 className="text-3xl sm:text-4xl text-white mb-6">{album.title}</h2>
-              <a
-                href={album.buyLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary uppercase tracking-widest text-sm"
-              >
-                Buy Album
-              </a>
+              <ITunesBuyButton albumId={album.albumId} />
             </div>
           </div>
         </section>
