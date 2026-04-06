@@ -78,8 +78,7 @@ export default function Home() {
       <section className="bg-black pt-3 pb-3 px-4">
         <ScrollReveal animation="scale-up" delay={150}>
           <div className="max-w-[1600px] mx-auto text-center">
-            <a href="/discography" className="btn-secondary uppercase tracking-widest text-sm inline-flex items-center gap-2">
-              <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-5.5c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"/></svg>
+            <a href="/discography" className="btn-secondary uppercase tracking-widest text-sm">
               Full Discography
             </a>
           </div>
