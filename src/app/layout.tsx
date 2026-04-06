@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/rich_bkgrd_image.webp",
+    icon: "/favicon.ico",
   },
   manifest: "/manifest.json",
   other: {
