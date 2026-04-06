@@ -15,9 +15,11 @@ export default function TacoSetlistSection() {
       const windowHeight = window.innerHeight;
 
       // Progress: 0 when section top enters viewport bottom,
-      // 1 when section top reaches ~40% from top of viewport
-      const start = windowHeight;
-      const end = windowHeight * 0.2;
+      // 1 when section is well into view
+      // On mobile use tighter range so animation doesn't fire too early
+      const isMobile = windowHeight < 800;
+      const start = isMobile ? windowHeight * 0.7 : windowHeight;
+      const end = isMobile ? windowHeight * 0.1 : windowHeight * 0.2;
       const raw = 1 - (rect.top - end) / (start - end);
       setProgress(Math.max(0, Math.min(1, raw)));
     };
