@@ -3,8 +3,14 @@ import BandsintownWidget from "@/components/BandsintownWidget";
 import ITunesBuyButton from "@/components/ITunesBuyButton";
 
 export const metadata: Metadata = {
-  title: "Tour | Rich O'Toole",
-  description: "Upcoming tour dates and shows for Rich O'Toole.",
+  title: "Tour Dates",
+  description:
+    "See Rich O'Toole live. Upcoming tour dates, ticket info, and show schedule for Texas Country's hardest-working artist.",
+  openGraph: {
+    title: "Rich O'Toole Tour Dates",
+    description: "See Rich O'Toole live. Upcoming shows and ticket info.",
+    images: ["/images/rich_bkgrd_image.webp"],
+  },
 };
 
 const latestAlbums = [

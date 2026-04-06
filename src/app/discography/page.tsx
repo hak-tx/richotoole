@@ -3,8 +3,14 @@ import ITunesBuyButton from "@/components/ITunesBuyButton";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Discography | Rich O'Toole",
-  description: "Complete discography of Rich O'Toole - all albums.",
+  title: "Discography",
+  description:
+    "Complete discography of Rich O'Toole. All studio albums including God Is a Gentleman, Ghost, New York, American Kid, Jaded, and In a Minute or 2. Buy on iTunes.",
+  openGraph: {
+    title: "Rich O'Toole Discography",
+    description: "All studio albums from Rich O'Toole. Buy on iTunes.",
+    images: ["/images/God_is_a_Gentleman_Album_Cover.webp"],
+  },
 };
 
 const albums = [
