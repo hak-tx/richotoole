@@ -86,6 +86,30 @@ export function ArtistJsonLd() {
         byArtist: { "@type": "MusicGroup", name: "Rich O'Toole" },
         albumProductionType: "https://schema.org/StudioAlbum",
       },
+      {
+        "@type": "MusicAlbum",
+        name: "Brightwork",
+        datePublished: "2013",
+        url: "https://music.apple.com/us/album/brightwork/721230683",
+        byArtist: { "@type": "MusicGroup", name: "Rich O'Toole" },
+        albumProductionType: "https://schema.org/StudioAlbum",
+      },
+      {
+        "@type": "MusicAlbum",
+        name: "Kiss of a Liar",
+        datePublished: "2010",
+        url: "https://music.apple.com/us/album/kiss-of-a-liar/400294152",
+        byArtist: { "@type": "MusicGroup", name: "Rich O'Toole" },
+        albumProductionType: "https://schema.org/StudioAlbum",
+      },
+      {
+        "@type": "MusicAlbum",
+        name: "Seventeen",
+        datePublished: "2006",
+        url: "https://music.apple.com/us/album/seventeen/191057293",
+        byArtist: { "@type": "MusicGroup", name: "Rich O'Toole" },
+        albumProductionType: "https://schema.org/StudioAlbum",
+      },
     ],
   };
 

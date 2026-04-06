@@ -44,6 +44,21 @@ const albums = [
     image: "/images/RT_In_a_minute_or_2.webp",
     albumId: "in-a-minute-or-2/675377522",
   },
+  {
+    title: "Brightwork",
+    image: "/images/Brightwork.jpeg",
+    albumId: "brightwork/721230683",
+  },
+  {
+    title: "Kiss of a Liar",
+    image: "/images/Kiss-of-a-Liar.jpeg",
+    albumId: "kiss-of-a-liar/400294152",
+  },
+  {
+    title: "Seventeen",
+    image: "/images/17.jpeg",
+    albumId: "seventeen/191057293",
+  },
 ];
 
 export default function DiscographyPage() {
