@@ -13,14 +13,16 @@ export default function TacoSetlistSection() {
 
       const rect = section.getBoundingClientRect();
       const windowHeight = window.innerHeight;
+      const sectionHeight = rect.height;
 
-      // Progress: 0 when section top enters viewport bottom,
-      // 1 when section is well into view
-      // On mobile use tighter range so animation doesn't fire too early
-      const isMobile = windowHeight < 800;
-      const start = isMobile ? windowHeight * 0.7 : windowHeight;
-      const end = isMobile ? windowHeight * 0.1 : windowHeight * 0.2;
-      const raw = 1 - (rect.top - end) / (start - end);
+      // Use the section's vertical center as the reference point.
+      // Animation starts when center enters viewport bottom,
+      // completes when center reaches viewport center.
+      // Same math on all screen sizes — no mobile special-casing.
+      const sectionCenter = rect.top + sectionHeight / 2;
+      const start = windowHeight;        // center at viewport bottom
+      const end = windowHeight * 0.35;   // center at ~35% from top
+      const raw = 1 - (sectionCenter - end) / (start - end);
       setProgress(Math.max(0, Math.min(1, raw)));
     };
 
@@ -29,38 +31,30 @@ export default function TacoSetlistSection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Easing function for smoother motion
-  const ease = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  // Smooth ease-out for natural deceleration
+  const ease = (t: number) => 1 - Math.pow(1 - t, 3);
 
-  // Staggered progress for each element
+  // Staggered progress for each element — spread across the full scroll range
   const p = (start: number, end: number) => {
     const raw = (progress - start) / (end - start);
     return ease(Math.max(0, Math.min(1, raw)));
   };
 
-  const iconP = p(0, 0.4);
-  const titleP = p(0.15, 0.5);
-  const taglineP = p(0.25, 0.55);
-  const descP = p(0.35, 0.65);
-  const buttonsP = p(0.5, 0.75);
-  const tagsP = p(0.6, 0.85);
-  const borderP = p(0.05, 0.7);
+  const borderP = p(0, 0.6);
+  const iconP = p(0.05, 0.45);
+  const titleP = p(0.2, 0.55);
+  const taglineP = p(0.3, 0.6);
+  const descP = p(0.4, 0.7);
+  const buttonsP = p(0.55, 0.8);
+  const tagsP = p(0.65, 0.9);
 
   return (
     <section className="bg-black py-8 sm:py-10 px-4" ref={sectionRef}>
       <div
         className="max-w-3xl mx-auto rounded-lg p-8 sm:p-12 text-center relative overflow-hidden"
         style={{
-          // Animated border - draws itself
-          borderWidth: "1px",
-          borderStyle: "solid",
-          borderImage: `linear-gradient(
-            ${borderP * 360}deg,
-            rgba(249, 115, 22, ${borderP * 0.5}) 0%,
-            rgba(249, 115, 22, ${borderP * 0.5}) ${borderP * 100}%,
-            transparent ${borderP * 100}%,
-            transparent 100%
-          ) 1`,
+          // Single smooth border that fades in with increasing opacity
+          border: `1px solid rgba(249, 115, 22, ${borderP * 0.5})`,
         }}
       >
         {/* Animated glow that intensifies */}
@@ -119,7 +113,7 @@ export default function TacoSetlistSection() {
             </h2>
           </div>
 
-          {/* Tagline - slides in from below with gradient mask */}
+          {/* Tagline */}
           <div
             style={{
               transform: `translateY(${(1 - taglineP) * 20}px)`,
@@ -131,7 +125,7 @@ export default function TacoSetlistSection() {
             </p>
           </div>
 
-          {/* Description - fades up with blur */}
+          {/* Description */}
           <div
             style={{
               transform: `translateY(${(1 - descP) * 25}px)`,
@@ -158,11 +152,11 @@ export default function TacoSetlistSection() {
             </p>
           </div>
 
-          {/* Buttons - scale up from zero */}
+          {/* Buttons */}
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
             style={{
-              transform: `scale(${buttonsP}) translateY(${(1 - buttonsP) * 15}px)`,
+              transform: `translateY(${(1 - buttonsP) * 20}px)`,
               opacity: buttonsP,
             }}
           >
@@ -207,7 +201,7 @@ export default function TacoSetlistSection() {
               "Stream Music",
               "Shop Merch",
             ].map((feature, i) => {
-              const tagP = p(0.6 + i * 0.07, 0.8 + i * 0.07);
+              const tagP = p(0.65 + i * 0.06, 0.85 + i * 0.06);
               return (
                 <span
                   key={feature}
