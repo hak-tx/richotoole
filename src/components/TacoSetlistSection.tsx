@@ -15,10 +15,10 @@ export default function TacoSetlistSection() {
       const windowHeight = window.innerHeight;
       const sectionHeight = rect.height;
 
-      // Animation starts as soon as the section top enters the viewport.
-      // Completes when the section top reaches 40% from viewport top.
-      const start = windowHeight * 0.95;  // just as top edge appears
-      const end = windowHeight * 0.4;
+      // Animation starts when top edge is 80% down the viewport,
+      // completes when top edge reaches 25% from top.
+      const start = windowHeight * 0.8;
+      const end = windowHeight * 0.25;
       const raw = 1 - (rect.top - end) / (start - end);
       setProgress(Math.max(0, Math.min(1, raw)));
     };
