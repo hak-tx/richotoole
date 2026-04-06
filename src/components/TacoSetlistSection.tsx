@@ -15,14 +15,11 @@ export default function TacoSetlistSection() {
       const windowHeight = window.innerHeight;
       const sectionHeight = rect.height;
 
-      // Use the section's vertical center as the reference point.
-      // Animation starts when center enters viewport bottom,
-      // completes when center reaches viewport center.
-      // Same math on all screen sizes — no mobile special-casing.
-      const sectionCenter = rect.top + sectionHeight / 2;
-      const start = windowHeight;        // center at viewport bottom
-      const end = windowHeight * 0.35;   // center at ~35% from top
-      const raw = 1 - (sectionCenter - end) / (start - end);
+      // Animation starts as soon as the section top enters the viewport.
+      // Completes when the section top reaches 40% from viewport top.
+      const start = windowHeight * 0.95;  // just as top edge appears
+      const end = windowHeight * 0.4;
+      const raw = 1 - (rect.top - end) / (start - end);
       setProgress(Math.max(0, Math.min(1, raw)));
     };
 
