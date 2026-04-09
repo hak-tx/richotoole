@@ -86,14 +86,14 @@ export default function Home() {
       {/* 4. MERCH */}
       <section className="bg-black pt-8">
         <ScrollReveal animation="scale-up">
-          <div>
+          <a href="https://godtexasandtacos.com" target="_blank" rel="noopener noreferrer">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/rich-merch-main.png"
               alt="Rich O'Toole Merch"
               className="w-full max-w-2xl mx-auto"
             />
-          </div>
+          </a>
         </ScrollReveal>
         <ScrollReveal animation="fade-up" delay={200}>
           <div className="text-center py-10 px-4">
