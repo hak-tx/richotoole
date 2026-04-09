@@ -7,6 +7,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/tour", label: "Tour" },
   { href: "/discography", label: "Discography" },
+  { href: "/taco-setlist", label: "Taco Setlist" },
   { href: "https://godtexasandtacos.com", label: "Merch", external: true },
 ];
 
@@ -16,15 +17,9 @@ export default function Header() {
   return (
     <header className="bg-black border-b border-white/10">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-4 sm:py-5">
-          <Link href="/" className="flex-shrink-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/rich-logo-dark-transparent.png"
-              alt="Rich O'Toole"
-              className="h-20 sm:h-24 md:h-28 w-auto object-contain"
-            />
-          </Link>
+        <div className="flex items-center justify-between py-3">
+          {/* Empty left side */}
+          <div />
 
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) =>
