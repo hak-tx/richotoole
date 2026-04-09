@@ -89,7 +89,7 @@ export default function Home() {
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/rich-mustang.webp"
+              src="/images/rich-merch-main.png"
               alt="Rich O'Toole Merch"
               className="w-full max-w-2xl mx-auto"
             />
