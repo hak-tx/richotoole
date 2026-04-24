@@ -85,7 +85,7 @@ export default function TacoSetlistSection() {
             </div>
           </div>
 
-          {/* "1st Taco Review App in Texas" - clip reveal from center */}
+          {/* Eyebrow - clip reveal from center */}
           <div
             style={{
               opacity: titleP,
@@ -93,7 +93,7 @@ export default function TacoSetlistSection() {
             }}
           >
             <p className="text-orange-400 uppercase tracking-[0.3em] text-xs sm:text-sm mb-3">
-              1st Taco Review App in Texas
+              Where Texas Country Music Meets Tacos
             </p>
           </div>
 
@@ -119,7 +119,7 @@ export default function TacoSetlistSection() {
             }}
           >
             <p className="text-orange-300/80 text-base sm:text-lg italic mb-4">
-              Where Texas Music meets Texas Tacos.
+              Tacos. Live Music. Anywhere.
             </p>
           </div>
 
@@ -132,9 +132,9 @@ export default function TacoSetlistSection() {
             }}
           >
             <p className="text-gray-300 text-base leading-relaxed mb-4 max-w-xl mx-auto">
-              Rate &amp; review tacos everywhere you go. Discover the best
-              tacos in every city — plus get Rich O&apos;Toole&apos;s latest tour
-              dates, stream his music, and shop exclusive merch, all in one app.
+              The taco map built for Texas Country fans on tour. Find the best
+              taco spots near every show, search the Top 50 touring artists&apos;
+              schedules, and plan your roadtrip — all in one app.
             </p>
             <p className="text-gray-500 text-sm mb-6">
               Available on iPhone &bull; Use{" "}
@@ -194,10 +194,10 @@ export default function TacoSetlistSection() {
           {/* Feature tags - pop in one at a time */}
           <div className="flex flex-wrap gap-3 justify-center">
             {[
-              "Rate & Review Tacos",
-              "Tour Dates",
-              "Stream Music",
-              "Shop Merch",
+              "Taco Reviews",
+              "Top 50 Tour Dates",
+              "Live Music Map",
+              "Roadtrip Planner",
             ].map((feature, i) => {
               const tagP = p(0.65 + i * 0.06, 0.85 + i * 0.06);
               return (

@@ -4,11 +4,11 @@ import TacoSetlistSection from "@/components/TacoSetlistSection";
 export const metadata: Metadata = {
   title: "Taco Setlist",
   description:
-    "The 1st Taco Review App in Texas. Rate & review tacos everywhere you go. Discover the best tacos in every city — plus get Rich O'Toole's latest tour dates, stream his music, and shop merch.",
+    "The taco map built for Texas Country fans on tour. Find the best taco spots near every show, search the Top 50 touring artists' schedules, and plan your roadtrip — all in one app.",
   openGraph: {
-    title: "Taco Setlist - Where Texas Music Meets Texas Tacos",
+    title: "Taco Setlist - Where Texas Country Music Meets Tacos",
     description:
-      "Rate & review tacos everywhere you go. Tour dates, music, and merch from Rich O'Toole.",
+      "Follow the Texas Country touring circuit and eat well doing it. Top 50 tour dates, taco reviews, and roadtrip planning — all in one app.",
     images: ["/images/taco-setlist-icon.webp"],
   },
 };

@@ -52,7 +52,7 @@ export default function AppBanner() {
             Taco Setlist
           </p>
           <p className="text-gray-400 text-xs truncate">
-            Rate tacos. Find shows. Get merch.
+            Tacos. Live Music. Anywhere.
           </p>
         </div>
         <a

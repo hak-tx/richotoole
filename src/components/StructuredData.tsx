@@ -151,7 +151,7 @@ export function SoftwareAppJsonLd() {
     operatingSystem: "iOS",
     applicationCategory: "FoodEstablishmentReservation",
     description:
-      "The 1st Taco Review App in Texas. Rate & review tacos everywhere you go. Discover the best tacos in every city — plus get Rich O'Toole's latest tour dates, stream his music, and shop exclusive merch.",
+      "The taco map built for Texas Country fans on tour. Find the best taco spots near every show, search the Top 50 touring artists' schedules, and plan your roadtrip — all in one app.",
     url: "https://tacosetlist.com",
     downloadUrl:
       "https://apps.apple.com/us/app/taco-setlist/id6760601913",
