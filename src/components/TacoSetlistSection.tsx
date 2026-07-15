@@ -13,7 +13,6 @@ export default function TacoSetlistSection() {
 
       const rect = section.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      const sectionHeight = rect.height;
 
       // Animation starts when top edge is 80% down the viewport,
       // completes when top edge reaches 5% from top — long range
@@ -44,7 +43,6 @@ export default function TacoSetlistSection() {
   const taglineP = p(0.25, 0.5);
   const descP = p(0.4, 0.65);
   const buttonsP = p(0.6, 0.85);
-  const tagsP = p(0.75, 0.95);
 
   return (
     <section className="bg-black py-8 sm:py-10 px-4" ref={sectionRef}>

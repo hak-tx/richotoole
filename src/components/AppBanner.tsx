@@ -9,6 +9,8 @@ export default function AppBanner() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+    let frameId: number | undefined;
+
     // Only show on iOS devices in non-Safari browsers
     // Safari handles this natively via the apple-itunes-app meta tag
     const ua = navigator.userAgent;
@@ -21,9 +23,15 @@ export default function AppBanner() {
     if (isIOS && !isSafari) {
       const dismissed = sessionStorage.getItem("app-banner-dismissed");
       if (!dismissed) {
-        setShow(true);
+        frameId = window.requestAnimationFrame(() => setShow(true));
       }
     }
+
+    return () => {
+      if (frameId !== undefined) {
+        window.cancelAnimationFrame(frameId);
+      }
+    };
   }, []);
 
   if (!show) return null;

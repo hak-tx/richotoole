@@ -8,7 +8,11 @@ const navLinks = [
   { href: "/tour", label: "Tour" },
   { href: "/discography", label: "Discography" },
   { href: "/taco-setlist", label: "Taco Setlist" },
-  { href: "https://godtexasandtacos.com", label: "Merch", external: true },
+  {
+    href: "https://godtexasandtacos.com/collections/rich-otoole-collection",
+    label: "Merch",
+    external: true,
+  },
 ];
 
 export default function Header() {

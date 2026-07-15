@@ -3,6 +3,7 @@ import SocialIcons from "@/components/SocialIcons";
 import TacoSetlistSection from "@/components/TacoSetlistSection";
 import ITunesBuyButton from "@/components/ITunesBuyButton";
 import ScrollReveal from "@/components/ScrollReveal";
+import MerchCollection from "@/components/MerchCollection";
 
 function Divider() {
   return (
@@ -27,7 +28,12 @@ export default function Home() {
 
       <Divider />
 
-      {/* 1. TOUR DATES */}
+      {/* 1. MERCH */}
+      <MerchCollection />
+
+      <Divider />
+
+      {/* 2. TOUR DATES */}
       <section className="bg-black pt-8 pb-0 px-4">
         <ScrollReveal animation="scale-up">
           <div className="max-w-[1600px] mx-auto text-center">
@@ -57,12 +63,12 @@ export default function Home() {
 
       <Divider />
 
-      {/* 2. TACO SETLIST */}
+      {/* 3. TACO SETLIST */}
       <TacoSetlistSection />
 
       <Divider />
 
-      {/* 3. CONTACT / BOOKING */}
+      {/* 4. CONTACT / BOOKING */}
       <ScrollReveal animation="fade-up">
         <section className="bg-black pt-10 pb-12 px-4">
           <div className="max-w-2xl mx-auto text-center">
@@ -80,35 +86,6 @@ export default function Home() {
           </div>
         </section>
       </ScrollReveal>
-
-      <Divider />
-
-      {/* 4. MERCH */}
-      <section className="bg-black pt-8">
-        <ScrollReveal animation="scale-up">
-          <a href="https://godtexasandtacos.com" target="_blank" rel="noopener noreferrer">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/rich-merch-main.png"
-              alt="Rich O'Toole Merch"
-              className="w-full max-w-2xl mx-auto"
-            />
-          </a>
-        </ScrollReveal>
-        <ScrollReveal animation="fade-up" delay={200}>
-          <div className="text-center py-10 px-4">
-            <h2 className="text-3xl sm:text-4xl text-white mb-6">MERCH STORE</h2>
-            <a
-              href="https://godtexasandtacos.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary uppercase tracking-widest text-sm"
-            >
-              SHOP HERE
-            </a>
-          </div>
-        </ScrollReveal>
-      </section>
 
       <Divider />
 

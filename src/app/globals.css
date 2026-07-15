@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
   --background: #000000;
@@ -19,7 +18,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Outfit', Arial, Helvetica, sans-serif;
+  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
   font-weight: 100;
   font-size: 110%;
 }
@@ -29,7 +28,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', Arial, Helvetica, sans-serif;
+  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
   font-weight: 100;
 }
 
@@ -77,6 +76,86 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-secondary:hover {
   background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Shopify collection carousel */
+.merch-carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 0.75rem) / 2);
+  gap: 0.75rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: inline mandatory;
+  scrollbar-width: none;
+}
+
+.merch-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.merch-product-card {
+  min-width: 0;
+  overflow: hidden;
+  scroll-snap-align: start;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 6px;
+  background: #0b0b0b;
+}
+
+.merch-product-image {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.merch-product-title {
+  display: -webkit-box;
+  min-height: 2.75rem;
+  overflow: hidden;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.merch-carousel-control {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 24px;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.merch-carousel-control:hover:not(:disabled) {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.merch-carousel-control:disabled {
+  cursor: default;
+  opacity: 0.28;
+}
+
+@media (min-width: 768px) {
+  .merch-carousel-track {
+    grid-auto-columns: calc((100% - 3rem) / 4);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .merch-carousel-track {
+    grid-auto-columns: calc((100% - 4.5rem) / 5);
+    gap: 1.125rem;
+  }
 }
 
 /* Hero parallax - desktop only */

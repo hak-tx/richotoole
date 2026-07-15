@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import AppBanner from "@/components/AppBanner";
 import { ArtistJsonLd, WebsiteJsonLd, SoftwareAppJsonLd } from "@/components/StructuredData";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-outfit",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://richotoole.com"),
@@ -80,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className={`${outfit.variable} h-full antialiased`}>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-0H40HQXKE9"
