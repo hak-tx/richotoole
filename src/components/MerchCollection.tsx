@@ -89,8 +89,6 @@ export default async function MerchCollection() {
           <div className="text-center">
             <a
               href={COLLECTION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="btn-secondary uppercase tracking-widest text-sm"
             >
               View Collection

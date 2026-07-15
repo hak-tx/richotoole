@@ -28,7 +28,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) =>
               link.external ? (
-                <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer"
+                <a key={link.href} href={link.href}
                   className="text-sm uppercase tracking-widest text-gray-300 hover:text-white transition-colors">
                   {link.label}
                 </a>
@@ -60,7 +60,7 @@ export default function Header() {
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) =>
               link.external ? (
-                <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer"
+                <a key={link.href} href={link.href}
                   className="block text-sm uppercase tracking-widest text-gray-300 hover:text-white transition-colors py-2"
                   onClick={() => setMenuOpen(false)}>
                   {link.label}

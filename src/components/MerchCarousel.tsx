@@ -93,8 +93,6 @@ export default function MerchCarousel({
           <article key={product.id} className="merch-product-card">
             <a
               href={product.href}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group block h-full"
             >
               <div className="merch-product-image">
@@ -126,8 +124,6 @@ export default function MerchCarousel({
       <div className="mt-8 text-center">
         <a
           href={collectionUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           className="btn-secondary uppercase tracking-widest text-sm"
         >
           View More
